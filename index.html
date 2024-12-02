@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmanuel Themba Malaleka - BMC Dev Consultant</title>
+
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -19,7 +20,6 @@
             color: white;
             text-align: center;
             padding: 80px 0;
-            background-image: url('your-image-url-here.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -94,7 +94,7 @@
             height: 150px;
             margin-bottom: 20px;
         }
-
+        
         .contact a {
             color: #d16d4a;
             font-size: 18px;
@@ -113,6 +113,84 @@
         footer p {
             font-size: 14px;
         }
+
+        /* Styling for the scrolling wrapper */
+        .scrolling-wrapper {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+            gap: 20px;
+            scroll-behavior: smooth;
+            white-space: nowrap; /* Prevent items from wrapping to the next line */
+        }
+
+        /* Individual project item styles */
+        .project-item {
+            width: 250px;
+            background-color: #f2d5a3;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            flex-shrink: 0; /* Prevent shrinking of items */
+            display: inline-block;
+            margin-right: 20px; /* Space between items */
+            height: auto; /* Ensure the height adjusts with content */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Image styling */
+        .project-item img {
+            width: 70%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Project title styling */
+        .project-title {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Description styling */
+        .project-description {
+            margin-top: 10px;
+            color: #555;
+            font-size: 14px;
+            display: none; /* Initially hidden */
+            word-wrap: break-word; /* Ensure the text wraps if too long */
+            white-space: normal; /* Allow wrapping */
+        }
+
+        /* Read more button styling */
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #d16d4a;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #e89b37;
+        }
+
+        /* Hover effect for showing the description */
+        .project-item:hover .project-description {
+            display: block;
+        }
+
+        /* Optional: Add a hover effect for the project item */
+        .project-item:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+        
     </style>
 </head>
 <body>
@@ -140,6 +218,59 @@
     </ul>
 </section>
 
+<section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <!-- Horizontal Project List -->
+    <div class="scrolling-wrapper">
+        <div class="project-item">
+            <img src="assets\Project Image Two.png" alt="Project 1">
+            <div class="project-title">Project 1</div>
+            <div class="project-description">
+                <p>This project demonstrates a basic web application built using HTML, CSS, and JavaScript. It highlights responsive design and interactive elements.</p>
+                <a href="#project1-details" class="read-more">Read More</a>
+        
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="assets\Project Image.png" alt="Project 2">
+            <div class="project-title">Project 2</div>
+            <div class="project-description">
+                <p>This project demonstrates a basic web application built using HTML, CSS, and JavaScript. It highlights responsive design and interactive elements.</p>
+                <a href="#project2-details" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="assets\Project Image Two.png" alt="Project 3">
+            <div class="project-title">Project 3</div>
+            <div class="project-description">
+                <p>This project demonstrates a basic web application built using HTML, CSS, and JavaScript. It highlights responsive design and interactive elements.</p>
+                <a href="#project1-details" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="assets\Project Image.png" alt="Project 4">
+            <div class="project-title">Project 4</div>
+            <div class="project-description">
+                <p>This project demonstrates a basic web application built using HTML, CSS, and JavaScript. It highlights responsive design and interactive elements.</p>
+                <a href="#project1-details" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="assets\Project Image Two.png" alt="Project 5">
+            <div class="project-title">Project 5</div>
+            <div class="project-description">
+                <p>This project demonstrates a basic web application built using HTML, CSS, and JavaScript. It highlights responsive design and interactive elements.</p>
+                <a href="#project1-details" class="read-more">Read More</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <section id="personal-info" class="personal-info">
     <h2>Contact Information</h2>
     <img src="assets\Emmanuel.png" alt="Emmanuel">
@@ -159,4 +290,5 @@
 </footer>
 
 </body>
+
 </html>
